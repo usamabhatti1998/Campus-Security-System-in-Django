@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns:text-decoration="http://www.w3.org/1999/xhtml" xmlns:color="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static 'css/steels.css' %}" type="text/css">
+</head>
+<body style="
+
+	font-family: sans-serif;
+	background: #dddddd;
+    background: url({% static 'pic/bb.jpg' %});
+	background-size:100%;
+	margin: 0;
+	padding: 0;
+">
+<h1 style="size: 30px;text-align: center;margin:0px;font-family: Veranda;color:white;background-color:#1B033D;"> WELCOME TO UOL CAMPUS SECURITY SYSTEM </h1><br>
+<br><br><br><br>
+
+<div class="login_box">
+	<form method="post" action="Welcome">
+        {% csrf_token %}
+		<h1 style="text-align:center;">LOGIN</h1>
+
+
+		<div class="textbox">
+			<i class="fas fa-user"></i>
+			<label for="Name"></label>
+			<input type="text" name="username" value="Enter User Name">
+		</div>
+
+
+		<div class="textbox">
+			<i class="fas fa-lock"></i>
+			<label for="password"></label>
+			<input type="Password" name="password" >
+		</div>
+
+
+		<input class="submit_button"; type="submit" name="submit" value="Submit">
+
+	</form>
+</div>
+</body>
+</html>

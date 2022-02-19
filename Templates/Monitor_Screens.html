@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns:text-decoration="http://www.w3.org/1999/xhtml" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor Screens Here</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <style>
+
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+     table{
+      border-collapse:separate;
+      border-spacing: 0 30px;
+      width:100%;
+      text-color:white;
+      }
+
+      th{
+      background-color: #1B033D;
+      color:white;
+      }
+
+      th,td{
+      width: 150px;
+      text-align: center;
+      text-color:white;
+      border: 2px solid white;
+      padding: 5px;
+      font-family:Helvetica;
+      font-size:18px;
+
+      }
+
+      h2{
+      color: #87CEFA;
+      }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 400px 190px;
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 10px;
+  height:500px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+  height:495px;
+}
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: 2px solid black;
+  color: White;
+  padding: 5px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 21px;
+  cursor: pointer;
+  float: center;
+
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+</head>
+<body style="  font-family: sans-serif;
+
+ background: url({% static 'pic/33.jpg' %});
+
+ background-size:100%;
+
+	margin: 0;
+	padding: 0;" >
+
+<h1 align="center" style="background-color:#1B033D;font-size:40px"> <a href="{{ToHomePage}}" style="color:white;text-decoration:none;font-family:veranda;">University of Lahore Security System</a></h1>
+
+<div>
+
+      <table style="width:100% ; text-decoration:none;">
+         <th><a href="{{DashboardLink}}"style="text-decoration:none; color:white;font-size:22px;">Dashboard</a></th>
+          <th><a href="{{MonitorScreenLink}}"style="text-decoration:none; color:white;font-size:22px;">Monitor Screen</a></th>
+          <th><a href="{{DataSetsLink}}"style="text-decoration:none; color:white;font-size:22px;">DataSets</a></th>
+          <th><a href="{{BlackListPersonLink}}"style="text-decoration:none; color:white;font-size:22px;">Blacklist Person</a></th>
+
+        </th>
+
+
+      </table>
+    </div>
+<h1 style="text-align:center; background:#0e0342; color:white;">Monitor Screens</h1>
+
+<h3 style="align:center">Click the Specific Gate Name to monitor it's Live Footage</h3>
+
+<div class="btn-group">
+  <button class="button">Gate-1</button>
+  <button class="button">Gate-2</button>
+  <button class="button">Gate-3</button>
+</div>
+
+
+
+<div class="grid-container" >
+    <div class="row">
+        <div class="column" style="border:solid 2px black">
+            <p >Gate1 Footage</p>
+            <hr>
+            <video width="100%" height="350px" controls autoplay>
+            <source src="{% static 'pic/aj1.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+        <div class="column" style="border:solid 2px black">
+            <p>Gate2 Footage</p>
+            <hr>
+            <video width="100%" height="350px" controls autoplay>
+            <source src="{% static 'pic/1.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+        <div class="column" style="border:solid 2px black">
+            <p>Gate3 Footage</p>
+            <hr>
+            <video width="100%" height="350px" controls autoplay>
+            <source src="{% static 'pic/2.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+</div>
+
+<h3 style="text-align:center;color:blue;"><button class="button button2" action=capture><b>Report a Problem</b></button></h3>
+</body>
+
+</html>

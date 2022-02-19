@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Black List any Unauthorized Person</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+      <style>
+    table{
+      border-collapse:separate;
+      border-spacing: 0 30px;
+      width:100%;
+      text-color:white;
+      }
+
+      th{
+      background-color: #1B033D;
+      color:white;
+      }
+
+      th,td{
+      width: 150px;
+      text-align: center;
+      text-color:white;
+      border: 2px solid white;
+      padding: 5px;
+      font-family:Helvetica;
+      font-size:18px;
+
+      }
+
+      h2{
+      color: #87CEFA;
+      }
+
+    </style>
+</head>
+<body style="  font-family: sans-serif;
+
+ background: url({% static 'pic/33.jpg' %});
+
+ background-size:100%;
+
+	margin: 0;
+	padding: 0;" >
+<h1 align="center" style="background-color:#1B033D;font-size:40px"> <a href="{{ToHomePage}}" style="color:white;text-decoration:none;font-family:veranda;">University of Lahore Security System</a></h1>
+<div>
+
+      <table style="width: 100%;">
+          <th><a href="{{DashboardLink}}"style="text-decoration:none; color:white;font-size:22px;">Dashboard</a></th>
+          <th><a href="{{MonitorScreenLink}}"style="text-decoration:none; color:white;font-size:22px;">Monitor Screen</a></th>
+          <th><a href="{{DataSetsLink}}"style="text-decoration:none; color:white;font-size:22px;">DataSets</a></th>
+          <th><a href="{{BlackListPersonLink}}"style="text-decoration:none; color:white;font-size:22px;">Blacklist Person</a></th>
+
+        </th>
+
+
+      </table>
+    </div>
+<h1 style="text-align:center; background:#0e0342; color:white;">Black-List Person</h1>
+<div style="color:white; align:center;"><h1 style="text-align:center; background:blue; color:white;">Blacklist a Person</h1>
+
+<form action="" style="text-align:center;">
+  <label for="fname"><b>Enter ID of Student/Employee</b></label><br><br><br>
+  <input type="integer" id="fname" name="fname" value="e.g 70068489"><br><br><br>
+   <b>Person is a :</b><br><br><br>
+  <input type="radio" id="Employee" name="Employee" value="Employee"><br><br>
+
+  <label for="Employee"><i>Employee</i></label><br><br><br>
+  <input type="radio" id="Studnet" name="Student" value="Studnet"><br><br><br>
+  <label for="Studnet">Student</label><br><br><br>
+
+    <input type="submit">
+
+</form></div>
+<h3 style="text-align:center;color:blue;"><button class="button button2" action=capture><b>Report a Problem</b></button></h3>
+
+</body>
+
+</html>

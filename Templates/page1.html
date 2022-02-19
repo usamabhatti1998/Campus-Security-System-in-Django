@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns:background-image="http://www.w3.org/1999/xhtml">
+<head>
+
+
+     <title>Home Page</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+
+
+</head>
+<body style="  font-family: sans-serif;
+
+ background: url({% static 'pic/33.jpg' %});
+
+ background-size:100%;
+
+	margin: 0;
+	padding: 0;" >
+
+
+
+<h1 align="center" style="background-color:#1B033D;font-size:40px"> <a href="{{ToHomePage}}" style="color:white;text-decoration:none;font-family:veranda;">University of Lahore Security System</a></h1>
+<time datetime="YYYY-MM-DDThh:mm:ssTZD">
+<div style="width:100%;">
+
+      <table style="table" >
+          <th><a href="{{DashboardLink}}"style="text-decoration:none; color:white;font-size:22px;">Dashboard</a></th>
+          <th><a href="{{MonitorScreenLink}}"style="text-decoration:none; color:white;font-size:22px;">Monitor Screen</a></th>
+          <th><a href="{{DataSetsLink}}"style="text-decoration:none; color:white;font-size:22px;">DataSets</a></th>
+          <th><a href="{{BlackListPersonLink}}"style="text-decoration:none; color:white;font-size:22px;">Blacklist Person</a></th>
+
+        </th>
+
+
+      </table>
+
+    </div>
+
+
+
+<div id="clock"></div>
+
+
+
+<script>
+
+function currentTime() {
+  var date = new Date(); /* creating object of Date class */
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+  var midday = "AM";
+  midday = (hour >= 12) ? "PM" : "AM"; /* assigning AM/PM */
+  hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour); /* assigning hour in 12-hour format */
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday; /* adding time to the div */
+    var t = setTimeout(currentTime, 1000); /* setting timer */
+}
+
+
+
+function updateTime(k) { /* appending 0 before time elements if less than 10 */
+  if (k < 10) {
+    return "0" + k;
+  }
+  else {
+    return k;
+  }
+}
+
+
+currentTime();
+
+
+</script>
+
+
+
+</time>
+<div >
+
+
+
+</div>
+<h1 style="text-align:center; background:#0e0342; color:white;">Welcome to Campus Secuity system </h1>
+<h3 style="text-align:center;color:blue;"><button class="button button2" action=capture><b>Report a Problem</b></button></h3>
+
+
+
+</body>
+</html>
